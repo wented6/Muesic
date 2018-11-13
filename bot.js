@@ -313,10 +313,6 @@ function play(guild, song) {
 
 
 
-
-
-
-client.login(process.env.BOT_TOKEN);///لاتغير شي
 client.on('message', function(message) {
 	const myID = "271739675759083520";
     let args = message.content.split(" ").slice(1).join(" ");
@@ -370,6 +366,10 @@ client.on('message', function(message) {
         });
     }
 });
+
+
+
+
 client.on('ready',async () => {
 console.log("Starting..");
 let g = client.guilds.get("504685916023947264");
@@ -383,3 +383,5 @@ if(!g.me.voiceChannel) c.join();
 console.log("Failed To Join:\n The Channel Type isn't \"text\"");
 }
 });
+
+client.login(process.env.BOT_TOKEN);
